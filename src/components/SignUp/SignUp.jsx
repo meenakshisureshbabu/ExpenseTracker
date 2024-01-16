@@ -1,9 +1,12 @@
 import React from 'react'
 import '../SignUp/signup.css'
 import { Link } from 'react-router-dom'
+import Header from '../Header/Header'
 
 function SignUp() {
   return (
+    <>
+    <Header/>
     <div className='main-div'>
     
     <div className='main-signup-div'>
@@ -47,6 +50,7 @@ function SignUp() {
         
     </div>
     </div>
+    </>
   )
 }
 

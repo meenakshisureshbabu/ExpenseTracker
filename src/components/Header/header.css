@@ -27,8 +27,12 @@ body{
 }
 
 .header-div{
-    border: solid black;
     display: flex;
     justify-content: space-between;
     width: 100vw;
+}
+
+.logo-img{
+    height: 100px;
+    width: 100px;
 }

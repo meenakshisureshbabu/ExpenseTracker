@@ -5,7 +5,7 @@ import '../Header/header.css'
 function Header() {
   return (
     <div className='header-div'>
-      <div className='title-div'> <h2>XPENZ</h2></div>
+      <div className='title-div'> <img className='logo-img' src="/XPENZ.png" alt="Logo"></img></div>
         <div><nav className='nav-bar'>
             <div>
             <Link to={"/register"}>

@@ -4,13 +4,16 @@ import '../About/about.css'
 
 function About() {
   return (
-    <div className='about-div'>
-        <Header/>
-        <div className='about-div'>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, eos laborum dolor deleniti possimus impedit provident ducimus harum adipisci pariatur! Vitae expedita soluta necessitatibus repellat voluptatum id nulla eum repellendus.</p>
+    <>
+    <Header/>
+    <div className='main-about-div'>
+        <div  className='about-div'>
+        <div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, eos laborum dolor deleniti possimus impedit provident ducimus harum adipisci pariatur! Vitae expedita soluta necessitatibus repellat voluptatum id nulla eum repellendus.</div>
+        </div>
         </div>
     </div>
-
+    </>
   )
 }
 

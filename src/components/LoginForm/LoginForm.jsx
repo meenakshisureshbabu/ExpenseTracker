@@ -1,12 +1,15 @@
 import React from 'react'
 import '../LoginForm/loginform.css'
 import { Link } from 'react-router-dom'
+import Header from '../Header/Header'
 
 function LoginForm() {
 
     
 
   return (
+    <>
+    <Header/>
     <div className='main-login-div'>
     
     <div className='sub-login-div'>
@@ -29,6 +32,7 @@ function LoginForm() {
         
     </div>
     </div>
+    </>
   )
 }
 

@@ -21,8 +21,9 @@ function App() {
       </>
       : 
       <>
-      <About/>
+      
       <Routes>
+        <Route path='/' element={<About/>}/>
         <Route path='/register' element={<SignUp/>}/>
         <Route path='/login' element={<LoginForm/>}></Route>
       </Routes>
