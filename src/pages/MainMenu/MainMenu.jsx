@@ -14,8 +14,26 @@ function MainMenu({user,setUser}) {
                 <div><h3>Hi {user.firstname}</h3></div>
 
             </div>
+            <div className='menu-div'>
+            
+              <div>
+                 📈DASHBOARD
+              </div>
+              <div>
+              💰INCOME
+              </div>
+              <div>
+              💸EXPENSE
+              </div>
+            </div>
+            <div className='logout-div'>
             <LogOut setUser={setUser}/>
+            </div>
         </aside>
+
+        <section>
+          
+        </section>
 
     </main>
   )

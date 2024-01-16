@@ -1,5 +1,6 @@
 import React from 'react'
 import { logout } from '../../utilities/users-service'
+import '../LogOut/logout.css'
 
 
 function LogOut({setUser}) {
@@ -11,7 +12,7 @@ function LogOut({setUser}) {
 
   return (
     <div>
-        <button onClick={handlelogOut}>Logout</button>
+        <button className='logoutbutton' onClick={handlelogOut}>Logout</button>
     </div>
   )
 }
