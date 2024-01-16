@@ -16,7 +16,8 @@ function App() {
       {/* <DataPage/> */}
         {/* <NavBar user={user} setUser={setUser}/> */}
         <Routes>
-          <Route></Route>
+
+          <Route path="/menu" element={} />
         </Routes>
       </>
       : 
@@ -25,7 +26,7 @@ function App() {
       <Routes>
         <Route path='/' element={<About/>}/>
         <Route path='/register' element={<SignUp/>}/>
-        <Route path='/login' element={<LoginForm/>}></Route>
+        <Route path='/login' element={<LoginForm setUser={setUser}/>}></Route>
       </Routes>
       </>
       
