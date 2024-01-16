@@ -1,0 +1,73 @@
+
+
+.main-login-div{
+   
+    display: flex;
+    justify-content: center;
+    
+}
+
+.icon{
+    margin-top: 5px;
+}
+
+.login-button-div{
+    padding-bottom: 5px;
+    
+    display: flex;
+    justify-content: center
+}
+
+.sub-login-div{
+    background-color: white;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow:10px 10px 10px black, -1em 0 0.4em black;
+    text-align: center;
+    line-height: 30px;
+}
+
+.img-out-div{
+    width: 30%;
+    
+}
+
+.register-link-div{
+    margin-top: 50px;
+}
+
+.userimage,.pwdimage{
+    height: 25px;
+    width: 25px;
+}
+
+.userwrapper, .pwdwrapper{
+    display: flex;
+}
+
+.userinput{
+    height: 20px;
+    width: 200px;
+}
+
+.loginbutton{
+    background-color: darkgreen;
+    border-radius: 5px;
+    width: 10rem;
+    height: 3rem;
+    color: white;
+    margin-left: 2rem;
+}
+
+.login-username-pwd-div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+a{
+    color: blue;
+}

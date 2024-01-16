@@ -1,0 +1,44 @@
+body{
+    /* background-image: url("https://as2.ftcdn.net/v2/jpg/02/55/72/33/1000_F_255723311_sMTZF0PB0orp7P1lKoLTfFLCE4BJ67oo.jpg");
+    background-size: cover; */
+}
+
+.main-signup-div{
+    background-color: white;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow:10px 10px 10px black, -1em 0 0.4em black;
+    text-align: center;
+    line-height: 30px;
+}
+
+.button-div{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.username-pwd-div{
+
+    width: 30vw;
+}
+
+.main-div{
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+
+
+.fnwrapper,.lnwrapper,.emailwrapper,.passwordwrapper,.confpasswordwrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button-div{
+    display: flex;
+    justify-content: space-between;
+}
