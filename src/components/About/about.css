@@ -1,6 +1,7 @@
 body{
-    background-image: url("https://png.pngtree.com/background/20220909/original/pngtree-beautiful-floral-leaf-in-soft-green-liquid-wallpaper-background-picture-image_1917513.jpg");
+    background-image: url("https://static.vecteezy.com/system/resources/previews/005/658/973/original/abstract-background-illustration-wallpaper-with-blue-light-color-blue-grid-mosaic-background-creative-design-templates-free-vector.jpg");
     background-size: cover;
+    /* background-color: white; */
 }
 
 .main-about-div{
@@ -11,7 +12,7 @@ body{
 
 .about-div{
     border: solid black;
-    background-color:white;
+    background-color:#c5dafc;
     display: flex;
     justify-content: center;
     border-radius: 15px 50px;

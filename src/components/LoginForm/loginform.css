@@ -19,7 +19,7 @@
 }
 
 .sub-login-div{
-    background-color: white;
+    background-color: #c5dafc;
     width: 30%;
     display: flex;
     justify-content: center;
@@ -53,12 +53,13 @@
 }
 
 .loginbutton{
-    background-color: darkgreen;
+    background-color: #8cbbfc;
+    color: black;
     border-radius: 5px;
     width: 10rem;
     height: 3rem;
-    color: white;
     margin-left: 2rem;
+    margin-bottom: 2rem;
 }
 
 .login-username-pwd-div{
