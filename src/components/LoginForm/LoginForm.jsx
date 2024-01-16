@@ -18,7 +18,7 @@ function LoginForm({setUser}) {
         e.preventDefault()
         try{
             const user = await signIn(credentials)
-            setUser(user)
+            setUser(user);
 
         }
         catch{

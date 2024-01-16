@@ -13,6 +13,10 @@ export async function signIn(credentials){
     return getUser()
 }
 
+export function logout(){
+    localStorage.removeItem('token');
+}
+
 export function getUser() {
     const token = getToken();
     // If there's a token, return the user in the payload, otherwise return null
