@@ -1,8 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import "../AddIncome/addincome.css";
 import AsideMenu from "../AsideMenu/AsideMenu";
+import * as incomeAPI from '../../utilities/income-api'
+import DatePicker from 'react-datepicker'
+import "react-datepicker/dist/react-datepicker.css"
 
 function AddIncome({ user, setUser }) {
+
+    const [incomedata,setIncomedata] = useState({title:'',amount:'',incdate:'',category:'',desc:'',month:''})
+    const [startDate, setStartDate] = useState(new Date());
+    const [error,setError] = useState('');
+    const handleChange = (e) => {
+        setIncomedata({...incomedata,[e.target.name]:e.target.value})
+        setError('')
+    }
+
+    async function handleAddIncome(e) {
+        e.preventDefault();
+        try{
+            const incdate = new Intl.DateTimeFormat('en-US',{year: 'numeric', month: '2-digit',day: '2-digit'}).format(startDate)
+            const month = incdate.substring(0,2)
+            incomedata.incdate = incdate;
+            incomedata.month = month;
+            incomedata.category=document.getElementById("category").value;
+            //setIncomedata(...incomedata,['incdate'],startDate)
+            console.log("BEFORE SUBMITTING...",incomedata)
+            const success = await incomeAPI.addItemToIncome(incomedata)
+            alert(success)
+            setError('Income Added successfully')
+        }
+        catch{
+            setError('Unable to add the expense')
+        }
+    }
+
   return (
     <div className="addincome-div">
       <AsideMenu user={user} setUser={setUser} />
@@ -21,27 +52,27 @@ function AddIncome({ user, setUser }) {
                     <input
                       type="text"
                       name="title"
-                      placeholder="Expense Title"
+                      placeholder="Expense Title" value={incomedata.title} onChange={handleChange}
                     />
                   </div>
                   <div>
                     <input
                       type="text"
                       name="amount"
-                      placeholder="Expense Amount"
+                      placeholder="Expense Amount" value={incomedata.amount} onChange={handleChange}
                     />
                   </div>
                   <div>
-                    <input type="date" name="date" />
+                 <DatePicker name="incdate" dateFormat="dd/MM/yyyy" selected={startDate} onChange={(date) => setStartDate(date)} /> 
                   </div>
                   <div className="select-div">
-                    <select name="category" id="category">
+                    <select name="category" id="category" onChange={handleChange}>
                       <option value="salary">Salary</option>
-                      <option value="salary">BitCoin</option>
-                      <option value="salary">Investment Return</option>
-                      <option value="salary">Bank Transfer</option>
-                      <option value="salary">Gift</option>
-                      <option value="salary">Other</option>
+                      <option value="bitcoin">BitCoin</option>
+                      <option value="investment">Investment Return</option>
+                      <option value="banktransfer">Bank Transfer</option>
+                      <option value="gift">Gift</option>
+                      <option value="other">Other</option>
                     </select>
                   </div>
 
@@ -49,15 +80,15 @@ function AddIncome({ user, setUser }) {
                     <input className="desc-text"
                       type="textarea"
                       name="desc"
-                      placeholder="Description"
+                      placeholder="Description" value={incomedata.desc} onChange={handleChange}
                     />
                   </div>
                   <div>
-                    <input type="submit" value="Add Income" />
+                    <input className="addbutton" type="submit"  onClick={handleAddIncome} value="➕Add Income" />
                   </div>
                   </div>
                 </form>
-              
+                <p className="error-message">&nbsp;{error}</p>
             </div>
             <div className="incomelist">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

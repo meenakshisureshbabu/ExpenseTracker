@@ -29,6 +29,11 @@
     margin-left: 2rem;
 }
 
+.addbutton{
+    background-color:#c5dafc;
+    cursor: pointer;
+}
+
 .formdiv{
     height: 100%;
     display: flex;

@@ -7,9 +7,10 @@ module.exports = {
 async function addIncome(req, res) {
     try{
       const income = await Income.create(req.body)
-      console.log(income)
+      console.log("HERRRRRRREEEEEE",income)
       res.status(200).json(income)
     }catch(e){
+        console.log("HHHHHHHHHHHHHHHHHHH")
       res.status(400).json({ msg: e.message });
     }  
 }
