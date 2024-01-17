@@ -1,0 +1,36 @@
+.profile-img{
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.menu-div{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 3rem;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+}
+
+aside{
+    border: solid black;
+    border-radius: 15px;
+    box-shadow:10px 10px 10px black, -1em 0 0.4em black;
+    margin: 2rem 2rem 2rem 2rem;
+    height: 90vh;
+    width: 15vw;
+}
+
+.logout-div{
+    margin-top: 15rem;
+}
+
+.dashboard-div,.income-div,.expense-div{
+    cursor: pointer;
+}

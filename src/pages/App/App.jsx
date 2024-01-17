@@ -6,6 +6,7 @@ import SignUp from '../../components/SignUp/SignUp'
 import About from '../../components/About/About';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import MainMenu from '../MainMenu/MainMenu';
+import AddIncome from '../../components/AddIncome/AddIncome'
 import { getUser } from '../../utilities/users-service';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Routes>
 
           <Route path="/menu" element={<MainMenu user={user} setUser={setUser}/>} />
+          <Route path="/addincome" element={<AddIncome user={user} setUser={setUser}/>}/>
           <Route path="/*" element={<Navigate to="/menu" />} />
         </Routes>
       </>
@@ -32,6 +34,7 @@ function App() {
         <Route path='/register' element={<SignUp/>}/>
         <Route path='/login' element={<LoginForm setUser={setUser}/>}></Route>
         <Route path="/*" element={<Navigate to="/" />} />
+        
       </Routes>
       </>
       
