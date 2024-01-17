@@ -47,3 +47,7 @@ section{
     border-radius: 15px;
     box-shadow:10px 10px 10px black, -1em 0 0.4em black;
 }
+
+.dashboard-div,.income-div,.expense-div{
+    cursor: pointer;
+}

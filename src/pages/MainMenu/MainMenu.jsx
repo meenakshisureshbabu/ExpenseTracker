@@ -16,14 +16,14 @@ function MainMenu({user,setUser}) {
             </div>
             <div className='menu-div'>
             
-              <div>
+              <div className='dashboard-div'>
                  📈DASHBOARD
               </div>
-              <div>
-              💰INCOME
+              <div className='income-div'>
+              💰 INCOME
               </div>
-              <div>
-              💸EXPENSE
+              <div className='expense-div'>
+              💸 EXPENSE
               </div>
             </div>
             <div className='logout-div'>
@@ -32,7 +32,7 @@ function MainMenu({user,setUser}) {
         </aside>
 
         <section>
-          
+
         </section>
 
     </main>
