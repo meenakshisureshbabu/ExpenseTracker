@@ -9,3 +9,13 @@ export function addItemToIncome(incomeData) {
 }
 
 
+export function getIncomedata(){
+    return sendRequest(`${BASE_URL}/getincomedata`)
+}
+
+
+export function deleteIncome(incomeid){
+    console.log("Inside income-api delete function")
+    return sendRequest(`${BASE_URL}/deleteincome/${incomeid}`,'POST')
+}
+

@@ -24,9 +24,11 @@ function AsideMenu({user,setUser}) {
               💰 INCOME
               </div>
               </Link>
+              <Link to='/addexpense'>
               <div className='expense-div'>
               💸 EXPENSE
               </div>
+              </Link>
             </div>
             <div className='logout-div'>
             <LogOut setUser={setUser}/>

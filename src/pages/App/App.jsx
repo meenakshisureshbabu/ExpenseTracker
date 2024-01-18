@@ -1,4 +1,3 @@
-
 import '../App/App.css'
 import { useState } from 'react';
 import {Routes,Route,Navigate} from 'react-router-dom';
@@ -8,6 +7,7 @@ import LoginForm from '../../components/LoginForm/LoginForm';
 import MainMenu from '../MainMenu/MainMenu';
 import AddIncome from '../../components/AddIncome/AddIncome'
 import { getUser } from '../../utilities/users-service';
+import AddExpense from '../../components/AddExpense/AddExpense';
 
 function App() {
 
@@ -23,6 +23,7 @@ function App() {
 
           <Route path="/menu" element={<MainMenu user={user} setUser={setUser}/>} />
           <Route path="/addincome" element={<AddIncome user={user} setUser={setUser}/>}/>
+          <Route path='/addexpense' element={<AddExpense user={user} setUser={setUser}/>}/>
           <Route path="/*" element={<Navigate to="/menu" />} />
         </Routes>
       </>

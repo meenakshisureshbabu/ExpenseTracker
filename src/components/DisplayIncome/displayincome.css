@@ -1,0 +1,29 @@
+.income-data-display-div{
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+    border: solid black;
+}
+
+.display-main-div{
+    height:100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.data-div{
+    border: solid black;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.whole-data-div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.data-delet-div{
+    width: 20%;
+    cursor: pointer;
+}

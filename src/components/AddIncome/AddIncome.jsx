@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../AddIncome/addincome.css";
 import AsideMenu from "../AsideMenu/AsideMenu";
 import * as incomeAPI from '../../utilities/income-api'
@@ -11,9 +11,33 @@ function AddIncome({ user, setUser }) {
     const [incomedata,setIncomedata] = useState({title:'',amount:'',incdate:'',category:'',desc:'',month:'',user:user._id})
     const [startDate, setStartDate] = useState(new Date());
     const [error,setError] = useState('');
+    const [incomedatadisplay,setIncomedatadisplay] = useState([])
+    const [status,setStatus] = useState();
+    const [totalincome,setTotalincome] = useState(0);
+    const [delflag,setDelflag] = useState();
     const handleChange = (e) => {
         setIncomedata({...incomedata,[e.target.name]:e.target.value})
         setError('')
+    }
+
+    useEffect(function(){
+      async function handleIncomedata() {
+        const incomedata = await incomeAPI.getIncomedata();
+        //console.log(incomedata)
+        setIncomedatadisplay(incomedata)
+        calculateTotalAmt(incomedata);
+      }
+      handleIncomedata()
+      setDelflag(false)
+    },[status,delflag]);
+    
+    function calculateTotalAmt(incomedata){
+      let sum = 0
+      for(let data of incomedata){
+        sum = sum + data.amount;
+
+      }
+      setTotalincome(sum);
     }
 
     async function handleAddIncome(e) {
@@ -27,10 +51,11 @@ function AddIncome({ user, setUser }) {
             //setIncomedata(...incomedata,['incdate'],startDate)
             console.log("BEFORE SUBMITTING...",incomedata)
             const success = await incomeAPI.addItemToIncome(incomedata)
+            setStatus(true);
             setError('Income Added successfully')
         }
         catch{
-            setError('Unable to add the expense')
+            setError('Unable to add the income')
         }
     }
 
@@ -40,7 +65,7 @@ function AddIncome({ user, setUser }) {
       <section>
         <div className="add-income-div">
           <div className="add-income-inner-div">
-            <h2>TOTAL INCOME:</h2>
+            <h2>TOTAL INCOME : {totalincome}</h2>
           </div>
 
           <div className="add-income">
@@ -52,14 +77,14 @@ function AddIncome({ user, setUser }) {
                     <input
                       type="text"
                       name="title"
-                      placeholder="Expense Title" value={incomedata.title} onChange={handleChange}
+                      placeholder="Income Title" value={incomedata.title} onChange={handleChange}
                     />
                   </div>
                   <div>
                     <input
                       type="text"
                       name="amount"
-                      placeholder="Expense Amount" value={incomedata.amount} onChange={handleChange}
+                      placeholder="Income Amount" value={incomedata.amount} onChange={handleChange}
                     />
                   </div>
                   <div>
@@ -91,7 +116,7 @@ function AddIncome({ user, setUser }) {
                 <p className="error-message">&nbsp;{error}</p>
             </div>
             <div className="incomelist">
-              <DisplayIncome/>
+              <DisplayIncome incomedatadisplay={incomedatadisplay} setDelflag={setDelflag} delflag={delflag}/>
             </div>
           </div>
         </div>

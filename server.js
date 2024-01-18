@@ -16,6 +16,7 @@ app.use(express.json());
 
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
+app.use(require('./config/checktoken'))
 
 
 //ROUTES
@@ -23,7 +24,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use('/api/users', require('./routes/api/users'));
 
 const ensureLoggedIn = require('./config/ensureLoggedIn');
-app.use('/api/income', require('./routes/api/income'));
+app.use('/api/income', ensureLoggedIn,require('./routes/api/income'));
+app.use('/api/expense', ensureLoggedIn,require('./routes/api/expense'));
 
 
 app.get('/*', function(req, res) {
