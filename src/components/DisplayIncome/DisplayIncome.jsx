@@ -28,6 +28,7 @@ function DisplayIncome({user,setUser,incomedatadisplay,delflag,setDelflag}) {
             <div className='data-div'>{data.title}</div>
             <div className='data-div'>{data.amount}</div>
             <div className='data-div'>{data.incdate}</div>
+            <div className='data-div'>{data.desc}</div>
             <div className='data-delet-div' onClick={()=>handleDelete(data._id)}>🗑️</div>
             </div>
           </div>

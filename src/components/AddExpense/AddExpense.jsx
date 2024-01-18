@@ -1,15 +1,15 @@
 import React from 'react'
-import { useEffect, useState } from "react";
-import "../AddExpense/addexpense.css";
-import AsideMenu from "../AsideMenu/AsideMenu";
+import AsideMenu from '../AsideMenu/AsideMenu'
+import { useState,useEffect } from 'react';
 import * as expenseAPI from '../../utilities/expense-api'
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css"
-import DisplayExpense from "../DisplayExpense/DisplayExpense";
+import DisplayExpense from '../DisplayExpense/DisplayExpense';
+import '../AddExpense/addexpense.css'
 
 function AddExpense({user,setUser}) {
-    
-    const [expensedata,setExpensedata] = useState({title:'',amount:'',incdate:'',category:'',desc:'',month:'',user:user._id})
+
+    const [expensedata,setExpensedata] = useState({title:'',amount:'',expdate:'',category:'',desc:'',month:'',user:user._id})
     const [startDate, setStartDate] = useState(new Date());
     const [error,setError] = useState('');
     const [expensedatadisplay,setExpensedatadisplay] = useState([])
@@ -30,23 +30,24 @@ function AddExpense({user,setUser}) {
       }
       handleExpensedata()
       setDelflag(false)
+      setStatus(false)
     },[status,delflag]);
-    
+
     function calculateTotalAmt(expensedata){
-      let sum = 0
-      for(let data of expensedata){
-        sum = sum + data.amount;
-
+        let sum = 0
+        for(let data of expensedata){
+          sum = sum + data.amount;
+  
+        }
+        setTotalexpense(sum);
       }
-      setTotalexpense(sum);
-    }
 
-    async function handleAddExpense(e) {
+      async function handleAddExpense(e) {
         e.preventDefault();
         try{
-            const incdate = new Intl.DateTimeFormat('en-US',{year: 'numeric', month: '2-digit',day: '2-digit'}).format(startDate)
-            const month = incdate.substring(0,2)
-            expensedata.incdate = incdate;
+            const expdate = new Intl.DateTimeFormat('en-US',{year: 'numeric', month: '2-digit',day: '2-digit'}).format(startDate)
+            const month = expdate.substring(0,2)
+            expensedata.expdate = expdate;
             expensedata.month = month;
             expensedata.category=document.getElementById("category").value;
             //setIncomedata(...incomedata,['incdate'],startDate)
@@ -54,6 +55,7 @@ function AddExpense({user,setUser}) {
             const success = await expenseAPI.addItemToExpense(expensedata)
             setStatus(true);
             setError('Expense Added successfully')
+
         }
         catch{
             setError('Unable to add the expense')
@@ -61,13 +63,14 @@ function AddExpense({user,setUser}) {
     }
 
 
+
   return (
     <div className="addexpense-div">
-      <AsideMenu user={user} setUser={setUser} />
-      <section>
+        <AsideMenu user={user} setUser={setUser} />
+        <section>
         <div className="add-expense-div">
           <div className="add-expense-inner-div">
-            <h2>TOTAL INCOME : {totalexpense}</h2>
+            <h2>TOTAL EXPENSE : {totalexpense}</h2>
           </div>
 
           <div className="add-expense">
@@ -127,8 +130,7 @@ function AddExpense({user,setUser}) {
         </div>
       </section>
     </div>
-  );
-  
+  )
 }
 
 export default AddExpense

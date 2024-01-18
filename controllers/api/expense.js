@@ -1,4 +1,4 @@
-const Expense = require("../../models/income");
+const Expense = require("../../models/expense");
 const user = require("../../models/user");
 const {ObjectId} = require("mongodb");
 
@@ -10,10 +10,12 @@ module.exports = {
 
 async function addExpense(req, res) {
   try {
+    console.log("HERE I AM ",req.body)
     const expense = await Expense.create(req.body);
-
+    console.log("AFTER SAVING DATA")
     res.status(200).json(expense);
   } catch (e) {
+    console.log("IN EXCEPTION BLOCK")
     res.status(400).json({ msg: e.message });
   }
 }

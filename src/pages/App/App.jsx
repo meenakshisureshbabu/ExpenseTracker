@@ -8,6 +8,7 @@ import MainMenu from '../MainMenu/MainMenu';
 import AddIncome from '../../components/AddIncome/AddIncome'
 import { getUser } from '../../utilities/users-service';
 import AddExpense from '../../components/AddExpense/AddExpense';
+import Dashboard from '../../components/Dashboard/Dashboard';
 
 function App() {
 
@@ -24,7 +25,8 @@ function App() {
           <Route path="/menu" element={<MainMenu user={user} setUser={setUser}/>} />
           <Route path="/addincome" element={<AddIncome user={user} setUser={setUser}/>}/>
           <Route path='/addexpense' element={<AddExpense user={user} setUser={setUser}/>}/>
-          <Route path="/*" element={<Navigate to="/menu" />} />
+          <Route path='/dashboard' element={<Dashboard user={user} setUser={setUser}/>}/>
+          <Route path="/*" element={<Navigate to="/dashboard" />} />
         </Routes>
       </>
       : 

@@ -29,6 +29,7 @@ function AddIncome({ user, setUser }) {
       }
       handleIncomedata()
       setDelflag(false)
+      setStatus(false)
     },[status,delflag]);
     
     function calculateTotalAmt(incomedata){
