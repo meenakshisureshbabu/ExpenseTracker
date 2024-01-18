@@ -4,10 +4,11 @@ import AsideMenu from "../AsideMenu/AsideMenu";
 import * as incomeAPI from '../../utilities/income-api'
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css"
+import DisplayIncome from "../DisplayIncome/DisplayIncome";
 
 function AddIncome({ user, setUser }) {
 
-    const [incomedata,setIncomedata] = useState({title:'',amount:'',incdate:'',category:'',desc:'',month:''})
+    const [incomedata,setIncomedata] = useState({title:'',amount:'',incdate:'',category:'',desc:'',month:'',user:user._id})
     const [startDate, setStartDate] = useState(new Date());
     const [error,setError] = useState('');
     const handleChange = (e) => {
@@ -26,7 +27,6 @@ function AddIncome({ user, setUser }) {
             //setIncomedata(...incomedata,['incdate'],startDate)
             console.log("BEFORE SUBMITTING...",incomedata)
             const success = await incomeAPI.addItemToIncome(incomedata)
-            alert(success)
             setError('Income Added successfully')
         }
         catch{
@@ -67,12 +67,12 @@ function AddIncome({ user, setUser }) {
                   </div>
                   <div className="select-div">
                     <select name="category" id="category" onChange={handleChange}>
-                      <option value="salary">Salary</option>
-                      <option value="bitcoin">BitCoin</option>
-                      <option value="investment">Investment Return</option>
-                      <option value="banktransfer">Bank Transfer</option>
-                      <option value="gift">Gift</option>
-                      <option value="other">Other</option>
+                      <option value="💵Salary">Salary</option>
+                      <option value="₿Bitcoin">BitCoin</option>
+                      <option value="🚀Investment">Investment Return</option>
+                      <option value="🏦Bank Transfer">Bank Transfer</option>
+                      <option value="🎁Gift">Gift</option>
+                      <option value="✨Other">Other</option>
                     </select>
                   </div>
 
@@ -91,10 +91,7 @@ function AddIncome({ user, setUser }) {
                 <p className="error-message">&nbsp;{error}</p>
             </div>
             <div className="incomelist">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit, aperiam. Iste optio sint, quidem saepe, ex esse
-              voluptates assumenda mollitia impedit pariatur atque, enim
-              perspiciatis recusandae vel error ipsum! Corrupti.
+              <DisplayIncome/>
             </div>
           </div>
         </div>
