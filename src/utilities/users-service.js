@@ -13,6 +13,13 @@ export async function signIn(credentials){
     return getUser()
 }
 
+export async function resetPwd(resetdata){
+    const token = await usersAPI.resetPwd(resetdata);
+    return getUser()
+}
+
+
+
 export function logout(){
     localStorage.removeItem('token');
 }

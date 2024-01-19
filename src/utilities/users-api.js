@@ -11,6 +11,10 @@ export async function signIn(credetials){
     return sendRequest(`${BASE_URL}/login`,'POST',credetials)
 }
 
+export async function resetPwd(resetdata){
+    return sendRequest(`${BASE_URL}/resetpwd`,'POST',resetdata)
+}
+
 export async function checkToken() {
     return sendRequest(`${BASE_URL}/check-token`);
   }

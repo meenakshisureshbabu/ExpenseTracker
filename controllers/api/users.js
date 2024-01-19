@@ -1,12 +1,14 @@
 const User = require('../../models/user')
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt')
+const SALT_ROUNDS = 6
 
 
 module.exports = {
     create,
     login,
-    checktoken
+    checktoken,
+    resetpwd
 }
 
 async function create(req,res){
@@ -16,6 +18,21 @@ async function create(req,res){
         const token = createJWT(user);
         console.log("TOKEN:::",token)
         res.json(token)
+    }
+    catch(err){
+        console.log("here.....")
+        res.status(400).json(err)
+    }
+}
+
+
+async function resetpwd(req,res){
+    try{
+        const hash = await bcrypt.hash(req.body.password,SALT_ROUNDS)
+        const user = await User.updateOne({email:req.body.email},{$set:{password:hash}})
+        //const token = createJWT(user);
+        //console.log("TOKEN:::",token)
+        res.json(user)
     }
     catch(err){
         console.log("here.....")
@@ -34,7 +51,7 @@ try{
     res.json(token)
 }
 catch(err){
-    req.status(400).json(err)
+    res.status(400).json(err)
 }
 
 }
