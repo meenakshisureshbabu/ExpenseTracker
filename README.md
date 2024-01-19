@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# EXPENSE TRACKER
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Table of Contents
 
-## Available Scripts
+1. [About the Project](#about-the-project)
+    - [Motivation](#motivation)
+    - [Built With](#built-with)
+2. [Getting Started](#getting-started)
+    - [Pre-requisites](#pre-requisites)
+    - [Installation](#installation)
+3. [Build Status](#build-status)
+4. [Screenshots](#screenshots)
+5. [Features](#features)
+6. [Reference](#reference)
+7. [Credits](#credits)
 
-In the project directory, you can run:
 
-### `npm start`
+## About the Project
+
+The main purpose of this project is to track the income and expenses. The user will be able to logged in with his/her own email id and password. 
+
+### Motivation
+
+I always see people struggle with their income and expense tracking. They don't have a proper planning. Even though there are so many apps in the internet, this app will be extra secured with user id and password. Hence it motivated me to do so.
+
+### Built With
+
+This project is built with
+1. HTML
+2. CSS
+3. REACT JS
+4. JAVA SCRIPT
+
+## Getting Started
+
+This project was created with [Create React App](https://github.com/facebook/create-react-app).
+
+### Pre-requisites
+
+Install the react library
+
+* npm install npm@latest -g
+
+Create the react app
+
+* npx create-react-app app-name
+
+### Installation
+
+1. [Clone the repo](https://github.com/meenakshisureshbabu/ReactAPIProject.git)
+
+* #### git clone git-hub-repo url
+
+2. Install npm packages
+
+* #### npm install
+
+3. In the project directory, you can run:
+
+* #### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
+The page will reload when you make changes.
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Build Status
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The social icons in this project will not work as it leads to personal information.
 
-### Analyzing the Bundle Size
+### Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Home page](/public/homepage.png)
 
-### Making a Progressive Web App
+This home page has 3 menus, 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. About
+2. Fruits Nutrition
+3. Spot your nearest grocery store.(Where the user can directly redirected to google maps with grocery store as input)
+4. Contact Us 
 
-### Advanced Configuration
+![Fruits Nutrition](/public/fruits.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+All the fruits will be displayed in this page and the user can click on each fruit to see its nutritional values which is called from the Fruityvice API.
 
-### Deployment
+![Contact Us](/public/contact.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The user can give the name and email id and send email with the messages/questions.
 
-### `npm run build` fails to minify
+### Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This website has a feature of toggling between daylight and dark mode themes which is implemented by useContext react hook.
+Fruit search feature is available to make the user search for a particular fruit.
+The user can send the mail with the questions they have.
+
+### Reference
+
+1. [w3Schools](https://www.w3schools.com/)
+2. [Unsplash](https://unsplash.com/)
+3. [Email](https://emailjs.com)
+4. [React Icons](https://react-icons.github.io/react-icons/)
+5. [React Popup](https://react-popup.elazizi.com/)
+
+### Credits
+
+1. [Jordan Wofford](https://www.linkedin.com/in/jmwofford/)
+2. [Dylan Comeau](https://www.linkedin.com/in/dylan-comeau-3b184815b/)
+
+
+
