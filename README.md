@@ -30,6 +30,9 @@ This project is built with
 2. CSS
 3. REACT JS
 4. JAVA SCRIPT
+5. Express JS
+6. MongoDB
+7. Node JS
 
 ## Getting Started
 
@@ -55,9 +58,29 @@ Create the react app
 
 * #### npm install
 
-3. In the project directory, you can run:
+3. Run the below command in the project directory
+
+* #### `npm run build`
+
+4. Add the proxy in the package.json file
+
+5. Add the database connection details and secret key in .env file
+
+6. In the project directory, you can run:
 
 * #### `npm start`
+
+7. In the project directory install the following:
+
+* #### `npm install mongoose`
+* #### `npm install bcrypt`
+* #### `npm install react-router-dom`
+* #### `npm install jsonwebtoken`
+* #### `npm install react-google-charts`
+
+8. Run the server in the port 3001
+
+* #### `nodemon server`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -68,6 +91,9 @@ You may also see any lint errors in the console.
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
 
 ### Build Status
 
