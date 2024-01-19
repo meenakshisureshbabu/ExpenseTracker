@@ -9,7 +9,9 @@ function About() {
     <div className='main-about-div'>
         <div  className='about-div'>
         <div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, eos laborum dolor deleniti possimus impedit provident ducimus harum adipisci pariatur! Vitae expedita soluta necessitatibus repellat voluptatum id nulla eum repellendus.</div>
+            <div>
+              <h3>Do not cut out your expenses.. Increase your income</h3>
+            </div>
         </div>
         </div>
     </div>
