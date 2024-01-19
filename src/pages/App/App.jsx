@@ -9,6 +9,7 @@ import AddIncome from '../../components/AddIncome/AddIncome'
 import { getUser } from '../../utilities/users-service';
 import AddExpense from '../../components/AddExpense/AddExpense';
 import Dashboard from '../../components/Dashboard/Dashboard';
+import ForgotPassword from '../../components/ForgotPassword/ForgotPassword';
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
         <Route path='/' element={<About/>}/>
         <Route path='/register' element={<SignUp/>}/>
         <Route path='/login' element={<LoginForm setUser={setUser}/>}></Route>
+        <Route path='/forgotpwd' element={<ForgotPassword/>}></Route>
         <Route path="/*" element={<Navigate to="/" />} />
         
       </Routes>

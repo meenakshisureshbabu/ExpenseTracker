@@ -48,6 +48,11 @@ function LoginForm({setUser}) {
             <div className='login-button-div'>
                 <button className='loginbutton' onClick={handleLogin}>LOGIN</button>
             </div>
+            <div>
+                <Link to='/forgotpwd'>
+                <a>Forgot Password</a>
+                </Link>
+            </div>
            
         </div>
         
