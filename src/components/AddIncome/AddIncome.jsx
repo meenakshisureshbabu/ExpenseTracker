@@ -67,19 +67,20 @@ function AddIncome({ user, setUser }) {
       <section>
         <div className="add-income-div">
           <div className="add-income-inner-div">
-            <h2>INCOME HISTORY</h2>
+            <h2>INCOMES</h2>
           </div>
 
           <div className="add-income">
             <div className="addincomeform">
               
-                <form>
+                <form onSubmit={handleAddIncome}>
                 <div className="formdiv">
                   <div>
                     <input
                       type="text"
                       name="title"
                       placeholder="Income Title" value={incomedata.title} onChange={handleChange}
+                      required
                     />
                   </div>
                   <div>
@@ -87,6 +88,7 @@ function AddIncome({ user, setUser }) {
                       type="text"
                       name="amount"
                       placeholder="Income Amount" value={incomedata.amount} onChange={handleChange}
+                      required
                     />
                   </div>
                   <div>
@@ -111,7 +113,7 @@ function AddIncome({ user, setUser }) {
                     />
                   </div>
                   <div>
-                    <input className="addbutton" type="submit"  onClick={handleAddIncome} value="➕Add Income" />
+                    <input className="addbutton" type="submit"   value="➕Add Income" />
                   </div>
                   </div>
                 </form>
