@@ -92,13 +92,14 @@ function AddExpense({user,setUser}) {
           <div className="add-expense">
             <div className="addexpenseform">
               
-                <form>
+                <form onSubmit={handleAddExpense}>
                 <div className="formdiv">
                   <div>
                     <input
                       type="text"
                       name="title"
                       placeholder="Expense Title" id="title" value={expensedata.title} onChange={handleChange}
+                      required
                     />
                   </div>
                   <div>
@@ -106,6 +107,7 @@ function AddExpense({user,setUser}) {
                       type="text"
                       name="amount"
                       placeholder="Expense Amount" id="amount" value={expensedata.amount} onChange={handleChange}
+                      required
                     />
                   </div>
                   <div>
@@ -133,7 +135,7 @@ function AddExpense({user,setUser}) {
                     />
                   </div>
                   <div>
-                    <input className="addbutton" type="submit"  onClick={handleAddExpense} value="➕Add Expense" />
+                    <input className="addbutton" type="submit"  value="➕Add Expense" />
                   </div>
                   </div>
                 </form>
