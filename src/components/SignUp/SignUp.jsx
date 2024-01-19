@@ -87,7 +87,7 @@ export default class SignUp extends Component {
                 <div className='login-link-div'>
                 Already a registered User?
                 <Link to="/login">
-                    <h4>LOGIN</h4>
+                    <h4>SIGN IN</h4>
                 </Link>
                 </div>
             </div>
