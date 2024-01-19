@@ -104,7 +104,7 @@ function AddExpense({user,setUser}) {
                   </div>
                   <div>
                     <input
-                      type="text"
+                      type="number"
                       name="amount"
                       placeholder="Expense Amount" id="amount" value={expensedata.amount} onChange={handleChange}
                       required
