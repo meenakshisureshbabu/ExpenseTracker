@@ -10,7 +10,7 @@ function About() {
         <div  className='about-div'>
         <div>
             <div>
-              <h3>Do not cut out your expenses.. Increase your income</h3>
+            <img className='logo-img' src="/xpenz.png" alt="Logo"></img>
             </div>
         </div>
         </div>
