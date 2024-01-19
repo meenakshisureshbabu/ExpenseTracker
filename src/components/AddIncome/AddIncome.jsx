@@ -85,7 +85,7 @@ function AddIncome({ user, setUser }) {
                   </div>
                   <div>
                     <input
-                      type="text"
+                      type="number"
                       name="amount"
                       placeholder="Income Amount" value={incomedata.amount} onChange={handleChange}
                       required
