@@ -20,6 +20,7 @@ function AddIncome({ user, setUser }) {
         setError('')
     }
 
+    const year = new Date().getFullYear();
     useEffect(function(){
       async function handleIncomedata() {
         const incomedata = await incomeAPI.getIncomedata();
@@ -66,7 +67,7 @@ function AddIncome({ user, setUser }) {
       <section>
         <div className="add-income-div">
           <div className="add-income-inner-div">
-            <h2>TOTAL INCOME : {totalincome}</h2>
+            <h2>INCOME HISTORY</h2>
           </div>
 
           <div className="add-income">
@@ -89,7 +90,7 @@ function AddIncome({ user, setUser }) {
                     />
                   </div>
                   <div>
-                 <DatePicker name="incdate" dateFormat="dd/MM/yyyy" selected={startDate} onChange={(date) => setStartDate(date)} /> 
+                 <DatePicker name="incdate" dateFormat="dd/MM/yyyy"  minDate={new Date(`01-01-${year}`)} maxDate={new Date(`12/31/${year}`)} selected={startDate} onChange={(date) => setStartDate(date)} /> 
                   </div>
                   <div className="select-div">
                     <select name="category" id="category" onChange={handleChange}>

@@ -24,9 +24,12 @@ function AddExpense({user,setUser}) {
     useEffect(function(){
       async function handleExpensedata() {
         const expensedata = await expenseAPI.getExpensedata();
+        if(expensedata){
         //console.log(incomedata)
-        setExpensedatadisplay(expensedata)
-        calculateTotalAmt(expensedata);
+          console.log(expensedata)
+          setExpensedatadisplay(expensedata)
+          calculateTotalAmt(expensedata);
+        }
       }
       handleExpensedata()
       setDelflag(false)
@@ -44,6 +47,7 @@ function AddExpense({user,setUser}) {
 
       async function handleAddExpense(e) {
         e.preventDefault();
+        
         try{
             const expdate = new Intl.DateTimeFormat('en-US',{year: 'numeric', month: '2-digit',day: '2-digit'}).format(startDate)
             const month = expdate.substring(0,2)
@@ -55,6 +59,7 @@ function AddExpense({user,setUser}) {
             const success = await expenseAPI.addItemToExpense(expensedata)
             setStatus(true);
             setError('Expense Added successfully')
+            
 
         }
         catch{
@@ -70,8 +75,19 @@ function AddExpense({user,setUser}) {
         <section>
         <div className="add-expense-div">
           <div className="add-expense-inner-div">
-            <h2>TOTAL EXPENSE : {totalexpense}</h2>
+            <h2>EXPENSES</h2>
           </div>
+
+          <div className='expenseheading-div'>
+            <div>
+              
+            </div>
+            <div>
+              <h4>Expense History</h4>
+            </div>
+          </div>
+
+
 
           <div className="add-expense">
             <div className="addexpenseform">
@@ -82,14 +98,14 @@ function AddExpense({user,setUser}) {
                     <input
                       type="text"
                       name="title"
-                      placeholder="Expense Title" value={expensedata.title} onChange={handleChange}
+                      placeholder="Expense Title" id="title" value={expensedata.title} onChange={handleChange}
                     />
                   </div>
                   <div>
                     <input
                       type="text"
                       name="amount"
-                      placeholder="Expense Amount" value={expensedata.amount} onChange={handleChange}
+                      placeholder="Expense Amount" id="amount" value={expensedata.amount} onChange={handleChange}
                     />
                   </div>
                   <div>
@@ -113,7 +129,7 @@ function AddExpense({user,setUser}) {
                     <input className="desc-text"
                       type="textarea"
                       name="desc"
-                      placeholder="Description" value={expensedata.desc} onChange={handleChange}
+                      placeholder="Description" id="desc" value={expensedata.desc} onChange={handleChange}
                     />
                   </div>
                   <div>

@@ -8,14 +8,14 @@ const incomeSchema = new Schema({
     amount: { type: Number, required:true},
     incdate:{type:String,required:true},
     category:{type:String,required:true},
-    desc:{type:String,required:true},
+    desc:{type:String},
     month:{type:Number,required:true}
   });
 
 
   incomeSchema.statics.getIncomedata = function(userId) {
     // 'this' is the Order model
-    return this.find({ user: userId});
+    return this.find({ user: userId}).sort({incdate:-1});
   };
 
   incomeSchema.statics.getDatedIncomedata = function(userId,month) {
