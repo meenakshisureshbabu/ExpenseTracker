@@ -79,7 +79,10 @@ export default class SignUp extends Component {
                 <div className='login-button-div'>
                     <button className='loginbutton' disabled={disable} onClick={this.handleSubmit}>SIGN UP</button>
                 </div>
-                <p className="error-message">&nbsp;{this.state.error}</p>
+                
+                </div>
+                <div>
+                <h3 className="error-message">&nbsp;{this.state.error}</h3>
                 </div>
                 <div className='login-link-div'>
                 Already a registered User?

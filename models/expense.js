@@ -18,4 +18,10 @@ const expenseSchema = new Schema({
     return this.find({ user: userId});
   };
 
+
+  expenseSchema.statics.getDatedExpensedata = function(userId,month) {
+    // 'this' is the Order model
+    return this.find({ user: userId,month:month});
+  };
+
 module.exports = mongoose.model("Expense",expenseSchema)

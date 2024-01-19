@@ -6,5 +6,6 @@ console.log("Inside Routes")
 router.post('/addincome',incomeCtrl.addIncome)
 router.get('/getincomedata',incomeCtrl.getIncomedata)
 router.post('/deleteincome/:id',incomeCtrl.delIncomedata)
+router.get('/getdatedincomedata/:month',incomeCtrl.getDatedIncomedata)
 
 module.exports = router;

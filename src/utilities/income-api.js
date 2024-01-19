@@ -13,6 +13,10 @@ export function getIncomedata(){
     return sendRequest(`${BASE_URL}/getincomedata`)
 }
 
+export function getIncomedataformonth(month){
+    return sendRequest(`${BASE_URL}/getdatedincomedata/${month}`)
+}
+
 
 export function deleteIncome(incomeid){
     console.log("Inside income-api delete function")

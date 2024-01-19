@@ -14,6 +14,11 @@ export function getExpensedata(){
 }
 
 
+export function getExpensedataformonth(month){
+    return sendRequest(`${BASE_URL}/getdatedexpensedata/${month}`)
+}
+
+
 export function deleteExpense(expenseid){
     console.log("Inside expense-api delete function")
     return sendRequest(`${BASE_URL}/deleteexpense/${expenseid}`,'POST')

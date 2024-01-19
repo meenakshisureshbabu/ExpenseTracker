@@ -5,7 +5,8 @@ const {ObjectId} = require("mongodb");
 module.exports = {
   addExpense,
   getExpensedata,
-  delExpensedata
+  delExpensedata,
+  getDatedExpensedata
 };
 
 async function addExpense(req, res) {
@@ -40,6 +41,19 @@ async function getExpensedata(req,res){
     res.status(400).json({ msg: e.message });
   }
 }
+
+async function getDatedExpensedata(req,res){
+    try{
+      
+      const expensedata = await Expense.getDatedExpensedata(req.user._id,req.params.month);
+      //incomedata.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
+      //console.log(incomedata)
+      res.status(200).json(expensedata);
+    }
+    catch(e){
+      res.status(400).json({ msg: e.message });
+    }
+  }
 
 
 async function delExpensedata(req,res){

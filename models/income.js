@@ -18,4 +18,9 @@ const incomeSchema = new Schema({
     return this.find({ user: userId});
   };
 
+  incomeSchema.statics.getDatedIncomedata = function(userId,month) {
+    // 'this' is the Order model
+    return this.find({ user: userId,month:month});
+  };
+
 module.exports = mongoose.model("Income",incomeSchema)

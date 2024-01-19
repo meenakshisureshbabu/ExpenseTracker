@@ -1,0 +1,12 @@
+.income-expense-chart{
+    width: 30%;
+}
+
+.expense-chart{
+    width: 30%;
+}
+
+.charts{
+    display: flex;
+    justify-content: space-evenly;
+}
