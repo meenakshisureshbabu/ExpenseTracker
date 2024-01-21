@@ -39,6 +39,10 @@ body{
     margin-left: 2rem;
 }
 
+.header-div{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .getstartbutton{
     border-radius: 10px;
     height: 50px;
@@ -46,6 +50,7 @@ body{
     background-color: #8cbbfc;
     margin-top: 1rem;
     cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .header-div{
