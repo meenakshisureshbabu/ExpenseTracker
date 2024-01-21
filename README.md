@@ -105,24 +105,36 @@ All the incomes and expenses were be able to added to the database.
 
 This home page has 3 menus, 
 
-1. About
-2. Fruits Nutrition
-3. Spot your nearest grocery store.(Where the user can directly redirected to google maps with grocery store as input)
-4. Contact Us 
+1. Home
+2. Contact Us
+3. Login
+4. Get Started button
 
-![Fruits Nutrition](/public/fruits.png)
+![Contact Us](/public/Contact.png)
 
-All the fruits will be displayed in this page and the user can click on each fruit to see its nutritional values which is called from the Fruityvice API.
+Contact Us will show my contact details
 
-![Contact Us](/public/contact.png)
+![Login](/public/Login.png)
 
-The user can give the name and email id and send email with the messages/questions.
+The user can give email id along with the password. Once the credentials are valid, the use is logged in.
+
+![Get Started](/public/Signup.png)
+
+The user will be able to create his/her email id and password along with first name and last name. Once the user details are accepted, the greeting mail will be sent.
+
+![Dashboard](/public/Dashboard.png)
+
+This is the screen where the user can see the chart view of his/her expenses based on the month.
+
+![Income Pge](/public/Income.png)
+
+This is the income page where the user would be able to add the incomes and view the income history.
+
+
 
 ### Features
 
-This website has a feature of toggling between daylight and dark mode themes which is implemented by useContext react hook.
-Fruit search feature is available to make the user search for a particular fruit.
-The user can send the mail with the questions they have.
+This website has a feature of user login and logout.
 
 ### Reference
 
@@ -130,7 +142,7 @@ The user can send the mail with the questions they have.
 2. [Unsplash](https://unsplash.com/)
 3. [Email](https://emailjs.com)
 4. [React Icons](https://react-icons.github.io/react-icons/)
-5. [React Popup](https://react-popup.elazizi.com/)
+5. [Google React Charts](https://www.react-google-charts.com/examples)
 
 ### Credits
 
