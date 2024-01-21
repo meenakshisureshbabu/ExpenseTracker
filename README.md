@@ -126,11 +126,13 @@ The user will be able to create his/her email id and password along with first n
 
 This is the screen where the user can see the chart view of his/her expenses based on the month.
 
-![Income Pge](/public/Income.png)
+![Income Page](/public/Income.png)
 
 This is the income page where the user would be able to add the incomes and view the income history.
 
+![Expense Page](/public/Expense.png)
 
+This is the expense page where the user would be able to add the expenses and view the expense history.
 
 ### Features
 
