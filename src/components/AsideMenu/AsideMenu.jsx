@@ -19,13 +19,13 @@ function AsideMenu({ user, setUser }) {
           </div>
         </div>
         <div className="menu-div">
-          <Link to='/dashboard'>
+          <Link style={{textDecoration:'none'}} to='/dashboard'>
             <div className="dashboard-div">📈DASHBOARD</div>
           </Link>
-          <Link to="/addincome">
+          <Link style={{textDecoration:'none'}} to="/addincome">
             <div className="income-div">💰 INCOME</div>
           </Link>
-          <Link to="/addexpense">
+          <Link style={{textDecoration:'none'}} to="/addexpense">
             <div className="expense-div">💸 EXPENSE</div>
           </Link>
         </div>

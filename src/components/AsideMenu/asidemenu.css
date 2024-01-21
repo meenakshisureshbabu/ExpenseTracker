@@ -11,7 +11,31 @@
     flex-direction: column;
     justify-content: space-evenly;
     gap: 3rem;
+    
+
 }
+
+.dashboard-div,.income-div,.expense-div{
+    transition: 0.5s ease;
+    font-size: 15px;
+    text-decoration: none;
+    width: fit-content;
+    margin-left: 2rem;
+}
+
+.income-div:hover{
+    border-left: 5px solid #0c3771;
+}
+.dashboard-div:hover{
+    border-left: 5px solid #0c3771;
+}
+.expense-div:hover{
+    border-left: 5px solid #0c3771;
+}
+
+
+
+
 
 .profile{
     display: flex;
