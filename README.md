@@ -97,7 +97,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Build Status
 
-The social icons in this project will not work as it leads to personal information.
+The income and expenses will not be able to filtered by month.
 
 ### Screenshots
 

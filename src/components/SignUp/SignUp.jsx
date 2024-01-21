@@ -2,8 +2,10 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import Header from '../Header/Header';
 import { Link } from 'react-router-dom';
+import emailjs from "@emailjs/browser";
 import '../SignUp/signup.css'
 import { signUp } from '../../utilities/users-service';
+
 
 export default class SignUp extends Component {
   
@@ -24,6 +26,31 @@ export default class SignUp extends Component {
 
     };
 
+    sendEmail = () => {
+        console.log("Inside EMAIL",this.state.email)
+        var templateparams = {
+            email:this.state.email,
+            firstname:this.state.firstname
+        }
+        
+        emailjs
+          .send(
+            "service_gjxr5tm",
+            "template_fyvzhrw",
+            templateparams,
+            "-yjiSbdT-JRQvkpJz"
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+              console.log("message sent");
+            },
+            (error) => {
+              console.log(error.text);
+            }
+          );
+      };
+
     handleSubmit = async (e) => {
         e.preventDefault();
         try{
@@ -33,7 +60,9 @@ export default class SignUp extends Component {
             console.log("Before calling the service"+formData)
             const expense_user = await signUp(formData);
             console.log(expense_user)
+            this.sendEmail();
             this.setState({error:'Sign Up Success - Please login'})
+            
 
         }
         catch{
@@ -54,6 +83,7 @@ export default class SignUp extends Component {
             
             <div className='username-pwd-div'>
             <h3>REGISTER </h3>
+            
                 <div class='fnwrapper'>
                     <div><label>First Name</label></div>
                     <div><input  type="text" name="firstname"  value={this.state.firstname} onChange={this.handleChange} required placeholder='First Name'/></div>
@@ -90,6 +120,7 @@ export default class SignUp extends Component {
                     <h4>SIGN IN</h4>
                 </Link>
                 </div>
+                
             </div>
             
         </div>

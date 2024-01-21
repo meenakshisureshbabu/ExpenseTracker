@@ -53,6 +53,12 @@ input{
     height: 2rem;
 }
 
+.incomeheading-div{
+    display: flex;
+    justify-content: space-evenly;
+    height: 10px;
+}
+
 .desc-text{
     height: 50px;
     width: 200px;

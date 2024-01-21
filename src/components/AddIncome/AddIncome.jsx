@@ -70,6 +70,15 @@ function AddIncome({ user, setUser }) {
             <h2>INCOMES</h2>
           </div>
 
+          <div className='incomeheading-div'>
+            <div>
+              
+            </div>
+            <div>
+              <h4>Income History</h4>
+            </div>
+          </div>
+
           <div className="add-income">
             <div className="addincomeform">
               
