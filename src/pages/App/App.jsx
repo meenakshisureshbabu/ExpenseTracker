@@ -10,6 +10,7 @@ import { getUser } from '../../utilities/users-service';
 import AddExpense from '../../components/AddExpense/AddExpense';
 import Dashboard from '../../components/Dashboard/Dashboard';
 import ForgotPassword from '../../components/ForgotPassword/ForgotPassword';
+import ContactUs from '../../components/ContactUs/ContactUs';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
         <Route path='/register' element={<SignUp/>}/>
         <Route path='/login' element={<LoginForm setUser={setUser}/>}></Route>
         <Route path='/forgotpwd' element={<ForgotPassword/>}></Route>
+        <Route path='/contactus' element={<ContactUs/>}></Route>
         <Route path="/*" element={<Navigate to="/" />} />
         
       </Routes>

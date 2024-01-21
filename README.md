@@ -97,7 +97,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Build Status
 
-The income and expenses will not be able to filtered by month.
+All the incomes and expenses were be able to added to the database.
 
 ### Screenshots
 

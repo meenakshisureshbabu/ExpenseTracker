@@ -1,0 +1,28 @@
+.contact-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5rem;
+    width: 25rem;
+    
+}
+
+.main-div{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+}
+
+.facebookicon,.twittericon,.instagramicon,.pinteresticon{
+    width: 40px;
+    height: 40px;
+}
+
+.social{
+    display: flex;
+    justify-content: space-evenly;
+    width: 25rem;
+    height: fit-content;
+    margin-top: 2rem;
+
+}

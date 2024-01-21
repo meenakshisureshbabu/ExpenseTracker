@@ -1,8 +1,9 @@
 .nav-bar{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     float: right;
     margin-right: 5rem;
+    width: 50rem;
 }
 
 body{
