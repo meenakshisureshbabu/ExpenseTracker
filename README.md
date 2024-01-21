@@ -101,7 +101,7 @@ All the incomes and expenses were be able to added to the database.
 
 ### Screenshots
 
-![Home page](/public/homepage.png)
+![Home page](/public/Homepage.png)
 
 This home page has 3 menus, 
 

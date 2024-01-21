@@ -10,7 +10,7 @@ function Header() {
           <nav id='nav1' className='nav-bar'>
           <div className='link-1'>
             <Link style={{textDecoration: 'none'}} to={"/"}>
-              <h3 className='about-menu'>ABOUT</h3>
+              <h3 className='about-menu'>HOME</h3>
             </Link>
             </div>
             <div className='link-1'>

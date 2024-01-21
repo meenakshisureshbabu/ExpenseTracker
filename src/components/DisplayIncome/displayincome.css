@@ -1,7 +1,7 @@
 .income-data-display-div{
     display: flex;
     justify-content: space-evenly;
-    height: 50px;
+    height: 30px;
     border: solid black;
 }
 
