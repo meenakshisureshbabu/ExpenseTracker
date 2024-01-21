@@ -7,19 +7,19 @@ function Header() {
     <div className='header-div'>
       <div className='title-div'> <img className='logoheader-img' src="/xpenz.png" alt="Logo"></img></div>
         <div>
-          <nav className='nav-bar'>
-          <div>
-            <Link to={"/"}>
-              <h3>ABOUT</h3>
+          <nav id='nav1' className='nav-bar'>
+          <div className='link-1'>
+            <Link style={{textDecoration: 'none'}} to={"/"}>
+              <h3 className='about-menu'>ABOUT</h3>
             </Link>
             </div>
-            <div>
-            <Link to={"/contactus"}>
+            <div className='link-1'>
+            <Link style={{textDecoration: 'none'}} to={"/contactus"}>
               <h3>CONTACT US</h3>
             </Link>
-            </div>
-            <div>
-            <Link to={"/login"}>
+            </div >
+            <div className='link-1'>
+            <Link style={{textDecoration: 'none'}} to={"/login"}>
               <h3>LOGIN</h3>
             </Link>
             </div>

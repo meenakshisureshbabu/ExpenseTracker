@@ -4,7 +4,27 @@
     float: right;
     margin-right: 5rem;
     width: 50rem;
+    
 }
+
+.about-menu {
+    text-decoration: none;
+}
+
+.link-1 {
+    transition: 0.3s ease;
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+    /* border-top: 2px solid #8cbbfc;
+    border-bottom: 2px solid #8cbbfc; */
+    margin: 0 20px;
+  }
+  .link-1:hover {
+    border-top: 4px solid #8cbbfc;
+    border-bottom: 4px solid #8cbbfc;
+  }
+
 
 body{
     /* background-image: url("https://media.freshbooks.com/wp-content/uploads/2022/02/expense-tracking.jpg");
@@ -25,6 +45,7 @@ body{
     width: 200px;
     background-color: #8cbbfc;
     margin-top: 1rem;
+    cursor: pointer;
 }
 
 .header-div{

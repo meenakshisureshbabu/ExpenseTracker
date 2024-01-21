@@ -13,6 +13,9 @@ function About() {
             <img className='logo-img' src="/xpenz.png" alt="Logo"></img>
             </div>
         </div>
+        <div>
+          
+        </div>
         </div>
     </div>
     </>
