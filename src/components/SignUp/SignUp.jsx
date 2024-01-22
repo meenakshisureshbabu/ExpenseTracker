@@ -57,9 +57,9 @@ export default class SignUp extends Component {
             const formData = {...this.state};
             delete formData.confirm;
             delete formData.error;
-            console.log("Before calling the service"+formData)
+            //console.log("Before calling the service"+formData)
             const expense_user = await signUp(formData);
-            console.log(expense_user)
+            //console.log(expense_user)
             this.sendEmail();
             this.setState({error:'Sign Up Success - Please login'})
             
