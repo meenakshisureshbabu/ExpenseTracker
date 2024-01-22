@@ -16,7 +16,7 @@
 }
 
 .dashboard-div,.income-div,.expense-div{
-    transition: 0.5s ease;
+    transition: 0.1s ease;
     font-size: 15px;
     text-decoration: none;
     width: fit-content;
