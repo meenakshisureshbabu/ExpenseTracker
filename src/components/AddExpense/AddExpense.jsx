@@ -55,7 +55,7 @@ function AddExpense({user,setUser}) {
             expensedata.month = month;
             expensedata.category=document.getElementById("category").value;
             //setIncomedata(...incomedata,['incdate'],startDate)
-            console.log("BEFORE SUBMITTING...",expensedata)
+            //console.log("BEFORE SUBMITTING...",expensedata)
             const success = await expenseAPI.addItemToExpense(expensedata)
             setStatus(true);
             setError('Expense Added successfully')
