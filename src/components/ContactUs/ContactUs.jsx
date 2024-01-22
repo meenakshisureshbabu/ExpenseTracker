@@ -10,16 +10,18 @@ function ContactUs() {
 
     let email = document.getElementById("contact_email").value;
     let name = document.getElementById("contact_name").value;
+    let query = document.getElementById("contact_query").value;
     
     var templateparams = {
-        contact_email:email,
-        contact_name:name
+        email:email,
+        name:name,
+        query:query
     }
     
     emailjs
       .send(
         "service_gjxr5tm",
-        "template_fyvzhrw",
+        "template_eg38wcg",
         templateparams,
         "-yjiSbdT-JRQvkpJz"
       )
@@ -46,6 +48,7 @@ function ContactUs() {
         <div className="contact-div">
           <input type="text" placeholder="Your Name" id="contact_name"></input>
           <input type="email" placeholder="Your Email" id="contact_email"></input>
+          <input type="text" placeholder="Your Query" id="contact_query"></input>
           <button className="send-button" onClick={sendEmail}>Send Query</button>
         </div>
         <div className="social">
