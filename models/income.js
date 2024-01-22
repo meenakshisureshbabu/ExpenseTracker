@@ -14,12 +14,12 @@ const incomeSchema = new Schema({
 
 
   incomeSchema.statics.getIncomedata = function(userId) {
-    // 'this' is the Order model
+    // 'this' is the Income model
     return this.find({ user: userId}).sort({incdate:-1});
   };
 
   incomeSchema.statics.getDatedIncomedata = function(userId,month) {
-    // 'this' is the Order model
+    // 'this' is the Income model
     return this.find({ user: userId,month:month});
   };
 

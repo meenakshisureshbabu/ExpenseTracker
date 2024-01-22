@@ -14,13 +14,13 @@ const expenseSchema = new Schema({
 
 
   expenseSchema.statics.getExpensedata = function(userId) {
-    // 'this' is the Order model
+    // 'this' is the Expense model
     return this.find({ user: userId}).sort({expdate:-1});
   };
 
 
   expenseSchema.statics.getDatedExpensedata = function(userId,month) {
-    // 'this' is the Order model
+    // 'this' is the Expense model
     return this.find({ user: userId,month:month});
   };
 
