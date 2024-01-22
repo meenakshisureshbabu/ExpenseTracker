@@ -21,8 +21,8 @@
     margin: 0 20px;
   }
   .link-1:hover {
-    border-top: 4px solid #8cbbfc;
     border-bottom: 4px solid green;
+    font-size: 20px;
   }
 
 
