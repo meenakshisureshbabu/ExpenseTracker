@@ -1,10 +1,13 @@
 import React from "react";
 import Header from "../Header/Header";
 import "../ContactUs/contactus.css";
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
 function ContactUs() {
   
+  const [show,setShow] = useState(false);
+
 
   const sendEmail = () => {
 
@@ -29,6 +32,10 @@ function ContactUs() {
         (result) => {
           console.log(result.text);
           console.log("message sent");
+          setShow(!show);
+          document.getElementById("contact_email").value="";
+          document.getElementById("contact_name").value="";
+          document.getElementById("contact_query").value="";
         },
         (error) => {
           console.log(error.text);
@@ -45,10 +52,13 @@ function ContactUs() {
           <img className="contact-img" src="https://media.istockphoto.com/id/1441262452/photo/communication-and-technology-concept-hand-putting-wooden-block-cube-symbol-telephone-email.webp?b=1&s=170667a&w=0&k=20&c=FtxQlZeGn__5ZHpc5zi9tx0GVTDZuZQoQcHT7mxDY4Q="/>
         </div>
       <div className="contact">
+      <div className={show ? "messagesent" : "hiddenmessage"}>
+        <img className="sent-icon" src="https://cdn.iconscout.com/icon/free/png-256/free-message-sent-9-1158909.png" alt="messageicon"/>
+        Message Sent</div>
         <div className="contact-div">
           <input type="text" placeholder="Your Name" id="contact_name"></input>
           <input type="email" placeholder="Your Email" id="contact_email"></input>
-          <input type="text" placeholder="Your Query" id="contact_query"></input>
+          <input type="text" placeholder="Your Query" id="contact_query" className="contact_query"></input>
           <button className="send-button" onClick={sendEmail}>Send Query</button>
         </div>
         <div className="social">
