@@ -55,6 +55,7 @@ function AddIncome({ user, setUser }) {
             const success = await incomeAPI.addItemToIncome(incomedata)
             setStatus(true);
             setError('Income Added successfully')
+            setIncomedata({title:'',amount:'',incdate:'',category:'',desc:'',month:'',user:user._id})
             
         }
         catch{
