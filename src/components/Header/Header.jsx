@@ -15,12 +15,12 @@ function Header() {
             </div>
             <div className='link-1'>
             <Link style={{textDecoration: 'none'}} to={"/contactus"}>
-              <h3>CONTACT US</h3>
+              <h3 className='contact-menu'>CONTACT US</h3>
             </Link>
             </div >
             <div className='link-1'>
             <Link style={{textDecoration: 'none'}} to={"/login"}>
-              <h3>LOGIN</h3>
+              <h3 className='login-menu'>LOGIN</h3>
             </Link>
             </div>
             <div>

@@ -29,7 +29,8 @@ body{
 }
 
 .text-div{
-    background-color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(119, 186, 245);
     border-radius: 20px;
     position: absolute;
     z-index: 10;

@@ -15,7 +15,7 @@ function About() {
         </div>
         <div className='text-div'>
             <div>
-              <p>Expense tracking helps your business by allowing you to identify and manage spending in an efficient time frame. It's essential to be aware of your business's cash flows so you can note any areas of excessive or inefficient spending.</p>
+              <p>Expense tracking helps your life by allowing you to identify and manage spending in an efficient time frame. It's essential to be aware of your cash flows so you can note any areas of excessive or inefficient spending.</p>
               <p><h2>Use our App today to feel better about your future.</h2></p>
             </div>
         </div>
