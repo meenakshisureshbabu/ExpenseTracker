@@ -50,7 +50,7 @@ Create the react app
 
 ### Installation
 
-1. [Clone the repo](https://github.com/meenakshisureshbabu/ReactAPIProject.git)
+1. [Clone the repo](https://github.com/meenakshisureshbabu/ExpenseTracker)
 
 * #### git clone git-hub-repo url
 

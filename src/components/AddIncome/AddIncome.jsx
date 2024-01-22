@@ -55,6 +55,7 @@ function AddIncome({ user, setUser }) {
             const success = await incomeAPI.addItemToIncome(incomedata)
             setStatus(true);
             setError('Income Added successfully')
+            
         }
         catch{
             setError('Unable to add the income')
@@ -88,6 +89,7 @@ function AddIncome({ user, setUser }) {
                     <input
                       type="text"
                       name="title"
+                      id="title"
                       placeholder="Income Title" value={incomedata.title} onChange={handleChange}
                       required
                     />
