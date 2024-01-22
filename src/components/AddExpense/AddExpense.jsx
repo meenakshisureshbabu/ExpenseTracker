@@ -59,7 +59,7 @@ function AddExpense({user,setUser}) {
             const success = await expenseAPI.addItemToExpense(expensedata)
             setStatus(true);
             setError('Expense Added successfully')
-            
+            setExpensedata({title:'',amount:'',expdate:'',category:'',desc:'',month:'',user:user._id})
 
         }
         catch{
