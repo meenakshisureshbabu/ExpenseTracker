@@ -25,7 +25,7 @@ async function create(req,res){
     }
 }
 
-
+//Restting the password
 async function resetpwd(req,res){
     try{
         const hash = await bcrypt.hash(req.body.password,SALT_ROUNDS)
