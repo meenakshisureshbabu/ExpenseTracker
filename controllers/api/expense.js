@@ -58,7 +58,7 @@ async function getDatedExpensedata(req,res){
 
 async function delExpensedata(req,res){
   try{
-    console.log("Inside controller delete function")
+    //console.log("Inside controller delete function")
     const delexpense = await Expense.findByIdAndDelete({_id:req.params.id})
     res.status(200).json(delexpense);
   }

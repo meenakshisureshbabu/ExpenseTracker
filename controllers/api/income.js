@@ -56,7 +56,7 @@ async function getDatedIncomedata(req,res){
 
 async function delIncomedata(req,res){
   try{
-    console.log("Inside controller delete function")
+    //console.log("Inside controller delete function")
     const delincome = await Income.findByIdAndDelete({_id:req.params.id})
     res.status(200).json(delincome);
   }
