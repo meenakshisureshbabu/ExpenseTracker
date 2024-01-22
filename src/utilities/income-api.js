@@ -3,7 +3,7 @@ const BASE_URL = '/api/income';
 
 
 export function addItemToIncome(incomeData) {
-    console.log(incomeData)
+    //console.log(incomeData)
     // Just send itemId for best security (no pricing)
     return sendRequest(`${BASE_URL}/addincome`, 'POST',incomeData);
 }
@@ -19,7 +19,7 @@ export function getIncomedataformonth(month){
 
 
 export function deleteIncome(incomeid){
-    console.log("Inside income-api delete function")
+    //console.log("Inside income-api delete function")
     return sendRequest(`${BASE_URL}/deleteincome/${incomeid}`,'POST')
 }
 

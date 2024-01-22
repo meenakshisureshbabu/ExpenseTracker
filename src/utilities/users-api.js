@@ -3,7 +3,7 @@ const BASE_URL = '/api/users';
 
 
 export async function signUp(userData) {
-    console.log(userData)
+    //console.log(userData)
     return sendRequest(`${BASE_URL}/register`,'POST',userData)
 }
 
