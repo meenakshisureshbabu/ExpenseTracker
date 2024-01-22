@@ -51,7 +51,7 @@ function AddIncome({ user, setUser }) {
             incomedata.month = month;
             incomedata.category=document.getElementById("category").value;
             //setIncomedata(...incomedata,['incdate'],startDate)
-            console.log("BEFORE SUBMITTING...",incomedata)
+            //console.log("BEFORE SUBMITTING...",incomedata)
             const success = await incomeAPI.addItemToIncome(incomedata)
             setStatus(true);
             setError('Income Added successfully')
