@@ -11,6 +11,14 @@
 .icon{
     margin-top: 5px;
 }
+.checkbox{
+    width: 10px;
+    height: 10px;
+}
+
+.check{
+    font-size: 15px;
+}
 
 .login-button-div{
     padding-bottom: 5px;
