@@ -112,7 +112,7 @@ This home page has 3 menus,
 
 ![Contact Us](/public/Contact.png)
 
-Contact Us will show my contact details
+Contact Us page enables the user to send the query to Xpenz.
 
 ![Login](/public/Newlogin.png)
 
