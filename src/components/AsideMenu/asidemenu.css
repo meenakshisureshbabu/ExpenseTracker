@@ -53,7 +53,8 @@ aside{
 }
 
 .logout-div{
-    margin-top: 15rem;
+    margin-top: 12rem;
+    margin-right: 2rem;
 }
 
 .dashboard-div,.income-div,.expense-div{
